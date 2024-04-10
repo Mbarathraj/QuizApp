@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import beepAudio from './Audio/beep-6-96243.mp3';
+import Login from './Login/Login'
 
 function App() {
   const [switchcount, setSwitchCount] = useState(0)
@@ -41,10 +42,11 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <Footer noOfQuestions={25} />
       <Questions />
-      <ToastContainer />
+      <ToastContainer /> */}
+      <Login/>
     </>
   )
 }
