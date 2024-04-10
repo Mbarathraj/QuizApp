@@ -1,24 +1,36 @@
-import React from 'react'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import './Login.css'
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
 
-const Login = () => {
+import Button from '@mui/material/Button';
+
+export default function Login() {
   return (
-    <>
-           <FloatingLabel
-        controlId="floatingInput"
-        label="Email address"
-        className="mb-3"
-      >
-        <Form.Control type="email" placeholder="name@example.com" />
-      </FloatingLabel>
-      <FloatingLabel controlId="floatingPassword" label="Password">
-        <Form.Control type="password" placeholder="Password" />
-      </FloatingLabel>
-    </>
-
-  )
+    <Box
+    id="box"
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        '& > :not(style)': { m: 1 },
+      }}
+    >
+      <TextField
+        helperText="Please enter your Username"
+        id="user"
+        label="Username"
+        className='textBox'
+      />
+      <TextField
+        className='textBox'
+        helperText="Please enter your Password"
+        id="pass"
+        label="Password"
+        type="password" // Add this line
+      />
+      <Button variant="contained" color="success">
+        Submit
+      </Button>
+    </Box>
+  );
 }
-
-export default Login
