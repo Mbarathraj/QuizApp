@@ -1,0 +1,170 @@
+[
+    {
+        "1": {
+            "easy": {
+                "questions": [
+                    {
+                        "question": "What is a data structure?",
+                        "answer": "A way to store and organize data",
+                        "options": [
+                            "A programming language",
+                            "A collection of algorithms",
+                            "A way to store and organize data",
+                            "A type of computer hardware"
+                        ]
+                    },
+                    {
+                        "question": "What are the disadvantages of arrays?",
+                        "answer": "There are chances of wastage of memory space if elements inserted in an array are lesser than the allocated size",
+                        "options": [
+                            "Index value of an array can be negative",
+                            "Elements are sequentially accessed",
+                            "Data structure like queue or stack cannot be implemented",
+                            "There are chances of wastage of memory space if elements inserted in an array are lesser than the allocated size"
+                        ]
+                    },
+                    {
+                        "question": "Which data structure is used for implementing recursion?",
+                        "answer": "Stack",
+                        "options": [
+                            "Stack",
+                            "Queue",
+                            "List",
+                            "Array"
+                        ]
+                    },
+                    {
+                        "question": "The data structure required to check whether an expression contains a balanced parenthesis is?",
+                        "answer": "Stack",
+                        "options": [
+                            "Queue",
+                            "Stack",
+                            "Tree",
+                            "Array"
+                        ]
+                    },
+                    {
+                        "question": "Which of the following is not the application of stack?",
+                        "answer": "Data Transfer between two asynchronous process",
+                        "options": [
+                            "Data Transfer between two asynchronous process",
+                            "Compiler Syntax Analyzer",
+                            "Tracking of local variables at run time",
+                            "A parentheses balancing program"
+                        ]
+                    }
+                ]
+            },
+
+      
+        "medium": {
+            "questions": [
+              {
+                "question": "What is the difference between a linked list and an array?",
+                "answer": "Linked list allows for dynamic memory allocation, while arrays have fixed sizes.",
+                "options": [
+                  "Linked list allows for dynamic memory allocation, while arrays have fixed sizes.",
+                  "Arrays support constant-time access to elements, while linked lists require sequential traversal.",
+                  "Linked lists have better cache locality compared to arrays.",
+                  "Arrays are inherently recursive data structures, while linked lists are not."
+                ]
+              },
+              {
+                "question": "How does a binary search tree differ from a binary tree?",
+                "answer": "Binary search tree guarantees logarithmic time complexity for insertion, deletion, and search operations.",
+                "options": [
+                  "Binary search tree guarantees logarithmic time complexity for insertion, deletion, and search operations.",
+                  "Binary trees can have nodes with any number of children, while binary search trees only have nodes with at most two children.",
+                  "Binary search trees require elements to be stored in sorted order, while binary trees do not have such a requirement.",
+                  "Binary trees have better average-case time complexity for search operations compared to binary search trees."
+                ]
+              },
+              {
+                "question": "What is the time complexity of searching in a hash table?",
+                "answer": "O(1) on average, assuming a good hash function and minimal collisions.",
+                "options": [
+                  "O(n)",
+                  "O(log n)",
+                  "O(1)",
+                  "O(n log n)"
+                ]
+              },
+              {
+                "question": "What is the purpose of a priority queue?",
+                "answer": "To retrieve elements based on priority, with the highest-priority elements being retrieved first.",
+                "options": [
+                  "To retrieve elements in first-in-first-out (FIFO) order.",
+                  "To retrieve elements based on priority, with the highest-priority elements being retrieved first.",
+                  "To retrieve elements in last-in-first-out (LIFO) order.",
+                  "To retrieve elements randomly."
+                ]
+              },
+              {
+                "question": "What is the advantage of using a doubly linked list over a singly linked list?",
+                "answer": "Doubly linked lists allow for traversal in both forward and backward directions.",
+                "options": [
+                  "Doubly linked lists use less memory.",
+                  "Doubly linked lists have faster insertion and deletion operations.",
+                  "Doubly linked lists allow for traversal in both forward and backward directions.",
+                  "Doubly linked lists have better cache performance."
+                ]
+              }
+            ]
+          },
+          "hard": {
+            "questions": [
+              {
+                "question": "Explain the difference between depth-first search (DFS) and breadth-first search (BFS) traversal techniques in a tree data structure.",
+                "answer": "DFS explores as far as possible along each branch before backtracking, while BFS explores all neighbors of a node before moving on to the next level.",
+                "options": [
+                  "DFS explores as far as possible along each branch before backtracking, while BFS explores all neighbors of a node before moving on to the next level.",
+                  "DFS guarantees finding the shortest path between two nodes, while BFS does not.",
+                  "BFS consumes more memory compared to DFS due to the need to store all the nodes at each level.",
+                  "DFS is typically implemented using a stack data structure, while BFS is implemented using a queue."
+                ]
+              },
+              {
+                "question": "Discuss the advantages and disadvantages of using a hash table for storing data compared to other data structures like arrays or trees.",
+                "answer": "Advantages include constant-time average-case lookup, efficient insertion, and deletion operations. Disadvantages include potential collisions and the need for a good hashing function.",
+                "options": [
+                  "Advantages include constant-time average-case lookup, efficient insertion, and deletion operations. Disadvantages include potential collisions and the need for a good hashing function.",
+                  "Hash tables have a lower memory overhead compared to arrays or trees due to their dynamic resizing capabilities.",
+                  "Arrays and trees provide deterministic time complexity for operations, while hash tables' performance can degrade in the presence of hash collisions.",
+                  "Hash tables are suitable for implementing associative arrays or sets, while arrays and trees are more general-purpose data structures."
+                ]
+              },
+              {
+                "question": "What is the time complexity of merge sort and quick sort?",
+                "answer": "Both have an average-case time complexity of O(n log n), but quick sort has a worst-case time complexity of O(n^2) while merge sort does not.",
+                "options": [
+                  "Merge sort: O(n^2), Quick sort: O(n log n)",
+                  "Merge sort: O(n log n), Quick sort: O(n^2)",
+                  "Both have an average-case time complexity of O(n log n), but quick sort has a worst-case time complexity of O(n^2) while merge sort does not.",
+                  "Both have a worst-case time complexity of O(n^2)."
+                ]
+              },
+              {
+                "question": "What are the applications of a trie data structure?",
+                "answer": "Tries are commonly used in dictionary implementations, autocomplete systems, and IP routing tables.",
+                "options": [
+                  "Tries are commonly used in dictionary implementations, autocomplete systems, and IP routing tables.",
+                  "Tries are mainly used in sorting algorithms.",
+                  "Tries are used for implementing priority queues.",
+                  "Tries are used for representing sparse matrices."
+                ]
+              },
+              {
+                "question": "Explain the concept of amortized analysis and its relevance to data structures.",
+                "answer": "Amortized analysis provides a way to analyze the time complexity of a sequence of operations rather than individual operations, which is particularly useful for dynamic data structures with expensive operations.",
+                "options": [
+                  "Amortized analysis provides a way to analyze the time complexity of a sequence of operations rather than individual operations, which is particularly useful for dynamic data structures with expensive operations.",
+                  "Amortized analysis focuses on worst-case time complexity of operations.",
+                  "Amortized analysis is only applicable to static data structures.",
+                  "Amortized analysis is primarily used for analyzing space complexity."
+                ]
+              }
+            ]
+          }
+    }
+}
+]

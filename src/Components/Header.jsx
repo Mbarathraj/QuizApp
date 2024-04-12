@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
-const Header = () => {  
+import Timer from './Timer';
+
+const Header = ({ noOfQuestions}) => {
   return (
     <div className='header-container'>
-        <div className="logo">Data Structure</div>
-        <div className="tail">
-        <div className="timer">
-            01:30:00
-        </div>
-        <button>Submit</button>
-        </div>
+      <div className="logo">Data Structure</div>
+      <div className="tail">
+         <Timer noOfQuestions={noOfQuestions}/>
+        <button onClick={()=>{
+          
+        }}>Submit</button>
+      </div>
     </div>
   )
 }
