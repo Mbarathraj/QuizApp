@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import beepAudio from './Audio/beep-6-96243.mp3';
+import Login1 from './Login/Login1'
 import Login from './Login/Login'
 
 function App() {
@@ -45,8 +46,8 @@ function App() {
       {/* <Header />
       <Footer noOfQuestions={25} />
       <Questions />
-      <ToastContainer /> */}
-      <Login/>
+      <ToastContainer /> * */}
+       <Login1/> 
     </>
   )
 }
