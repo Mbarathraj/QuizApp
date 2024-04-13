@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import './Login1.css'
+// import './Login1.css'
 import {Button} from '@mui/material';
-import asserts from '../assets/Asserts'
 import UserIcon from '../assets/Asserts';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
