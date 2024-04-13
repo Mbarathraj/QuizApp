@@ -1,9 +1,8 @@
 import React from 'react'
 import './Login1.css'
 import {Button} from '@mui/material';
-import asserts from '../assets/Asserts'
 import UserIcon from '../assets/Asserts';
-i
+
 const Login1 = () => {
   return (
     <div className='container'>

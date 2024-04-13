@@ -7,13 +7,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import beepAudio from './Audio/beep-6-96243.mp3';
 import Login1 from './Login/Login1'
-import Login from './Login/Login'
+
 
 function App() {
   return (
     <>
-      <QuizComponent/>
-      {/* <Login/> */}
+      {/* <QuizComponent/> */}
       
       {/* <Header />
       <Footer noOfQuestions={25} />
