@@ -9,6 +9,12 @@ function UserIcon() {
   );
 }
 
+function addIcon()
+{
+  return(
+    <FaPlusCircle className="icon Add"/>
+  )
+}
 
 
-export default UserIcon;
+export default {UserIcon,addIcon};

@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.admin-header{
+    width: 250px;
+    height: 100vh;
+    border: 1px solid #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius:0 40px  40px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: fixed;
+}
+ul li{
+    list-style: none;   
+    padding-right: 5px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.admin-header img {
+    background-color: #e22424;
+    width: 150px;
+    height: 100px;
+   position: absolute;
+   top: 0;
+}
+.head a{
+    text-decoration: none;
+    color: #000;
+}
+.icons{
+    font-size: 20px
+}
+.AdminaddQuestion{
+    margin-left: 250px;
+}
+.addQ-container{
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.question-head{
+    width: 600px;
+    padding: 20px;
+    border: 2px solid #888;
+}
+.questions{
+    width: 600px;
+    height: 600px;
+    margin-top: 20px;
+    border: 2px solid #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-question{
+    width: 80%;
+    height: 60px;
+    border: none;
+    outline: none;
+
+}
+.input-question input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    border: 2px solid #888;
+    padding: 6px;
+}
+.options{
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 2px solid #888;
+    padding: 6px;
+    padding: 20px;
+    margin-top: 20px;
+}
