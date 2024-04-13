@@ -9,24 +9,21 @@ import beepAudio from './Audio/beep-6-96243.mp3';
 import Login1 from './Login/Login1'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Dashboard from './Components/Dashboard/Dashboard'
+import { useState } from 'react'
 
 function App() {
+  let user = JSON.parse(localStorage.getItem("userInfo"))
+  // console.log(user)
+  const [userInfo, setUserInfo] = useState(user)
   return (
     <>
-    {/* <QuizComponent/> */}
-      {/* <Login/> */}
-      
-      {/* <Header />
-      <Footer noOfQuestions={25} />
-      <Questions />
-      <ToastContainer /> * */}
-       {/* <Login1/>  */} 
-       <BrowserRouter>
-       <Routes>
-        <Route path='/login' element={<Login1/>}></Route>
-        <Route path='/dashboard' element={<Dashboard/>}></Route>
-       </Routes>
-       </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/login' element={<Login1 setUserInfo={setUserInfo} />}></Route>
+          <Route path='/login/dashboard' element={<Dashboard userInfo={userInfo} />}></Route>
+          <Route path='/login/dashboard/quiz' element={<QuizComponent />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

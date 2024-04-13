@@ -5,17 +5,24 @@ import asserts from '../assets/Asserts'
 import UserIcon from '../assets/Asserts';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const Login1 = () => {
+const Login1 = ({setUserInfo}) => {
+useEffect(()=>{
+  if(user.email){
+    navigate("/login/dashboard")
+  }
+},[])
+  let user=JSON.parse(localStorage.getItem("userInfo"))
+const navigate=useNavigate()
 
   const [email,setEmail]=useState()
   const [password,setPassword]=useState()
-  const navigate=useNavigate;
 
 function handleSubmit(){
   axios.post("http://localhost:8000/login",{email,password})
   .then(res => {
- 
-    if(res.data=="Success"){
+    if(res.data){
+     setUserInfo(res.data);
+     localStorage.setItem("userInfo",JSON.stringify(res.data));
       navigate('./dashboard')
     }
   })

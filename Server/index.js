@@ -24,7 +24,7 @@ app.post("/login", (req, res) => {
         console.log(user);
         if(user){
             if(user.password===password){
-                res.json("Success")
+                res.json(user)
             }
             else{
                 res.json("Wrong password")
