@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login1.css'
 import {Button} from '@mui/material';
 import asserts from '../assets/Asserts'
 import UserIcon from '../assets/Asserts';
-i
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Login1 = () => {
+
+  const [email,setEmail]=useState()
+  const [password,setPassword]=useState()
+  const navigate=useNavigate;
+
+function handleSubmit(){
+  axios.post("http://localhost:8000/login",{email,password})
+  .then(res => {
+ 
+    if(res.data=="Success"){
+      navigate('./dashboard')
+    }
+  })
+  .catch(err => console.log(err))
+}
+
+
+
   return (
     <div className='container'>
         <div className='img-box'>
@@ -23,17 +42,32 @@ const Login1 = () => {
         </div>
         <div className='text-box'>
             <div className='text-box-content'>
-              <label htmlFor="text">Username*</label>
-              <input type="text" placeholder='Username'/>
+              <label htmlFor="text">Email *</label>
+              <input type="text" placeholder='Username'
+              onChange={(e)=>{
+                  setEmail(e.target.value)
+              }}
+              />
             </div>
             <div className='text-box-content'>
-              <label htmlFor="password">Password*</label>
-              <input type="password" placeholder='Password' />
+              <label htmlFor="password">Password *</label>
+              <input type="password" placeholder='Password'
+              onChange={(e)=>{
+                  setPassword(e.target.value)
+              }}
+              />
             </div>
         </div>
         
         <div>
-            <Button className="but" variant="contained" color="success">
+            <Button className="but" variant="contained" color="success"
+            onClick={()=>{
+              handleSubmit()
+            }}
+            
+            
+            
+            >
               Submit
             </Button>
         </div>
