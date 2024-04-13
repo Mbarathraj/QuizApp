@@ -1,0 +1,64 @@
+
+.dashboard{
+    height: 100vh;
+    font-size: 1.125rem;
+}
+.sidebar{
+    width: 18rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    overflow: hidden;
+}
+.mainDash{
+    margin-left: 19rem;
+    margin-top: 1rem;
+}
+ img{
+    width: 8rem;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+.sidecontents{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.sideContent{
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+   
+}
+.sideContent::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color:rgba(136, 165, 191, 0.48);
+    bottom: 0;
+    transition: 1s;
+}
+.sideContent:first-child{
+    margin-top: 4rem;
+}
+.logout{
+    position: absolute;
+    bottom: 2rem;
+    cursor: pointer;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    padding-left: 20px;
+}
+.sideContent:hover::before{
+    width: 90%;
+}
+.sideContent.active1{
+    background-color: rgba(136, 165, 191, 0.48);
+}
