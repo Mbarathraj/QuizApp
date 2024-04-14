@@ -43,7 +43,7 @@ function App() {
 
           {/* Login/AdminDashboard */}
 
-          <Route path="/login/admindashboard"></Route>
+          <Route path="/login/admindashboard" element={<Admin}></Route>
         </Routes>
         <ToastContainer />
       </BrowserRouter>
