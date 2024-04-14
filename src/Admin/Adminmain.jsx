@@ -7,8 +7,8 @@ const Adminmain = () => {
   return (
     <div>
           <div className="main">
-              <Admin />
-              <Addlogicals />
+              {/* <Admin /> */}
+              {/* <Addlogicals /> */}
               <AdminaddQuestion/>
           </div>
     </div>

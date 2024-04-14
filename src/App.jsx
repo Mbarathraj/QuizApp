@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Login1 from "./Login/Login1";
-
+import Adminmain from './Admin/Adminmain'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import { useState } from "react";
@@ -43,7 +43,7 @@ function App() {
 
           {/* Login/AdminDashboard */}
 
-          <Route path="/login/admindashboard" element={<Admin}></Route>
+          <Route path="/login/admindashboard" element={<Adminmain/>}></Route>
         </Routes>
         <ToastContainer />
       </BrowserRouter>

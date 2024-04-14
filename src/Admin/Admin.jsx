@@ -3,14 +3,16 @@ import './Admin.css'
 import { SiCompilerexplorer } from "react-icons/si";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { MdOutlineFileUpload } from "react-icons/md";
+
 import { FaMarker } from "react-icons/fa6";
+import logo from '../images/logo-new3.jpg';
 const Admin = () => {
   return (
     <div>
       <div className="admi-container">
         <div className="admin-header">
           <div className="head">
-            <img src="src/images/logo-new3.jpg" alt="" />
+            <img src={logo} alt="" />
 
             <div className="list">
               <ul>

@@ -56,11 +56,11 @@ ul{
 }
 .questions{
     width: 600px;
-    height: 450px;
+    height: 100%;
     margin-top: 20px;
     border: 2px solid #888;
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
     justify-content: center;
     border-radius: 8px;
@@ -202,3 +202,20 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: 1px solid #e0e0e0;
 }   
+.first-col{
+    display: flex;
+}
+.add-icon-btn{
+    width: 40px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-left: 30px;
+    box-shadow: rgba(50, 50, 50, 0.395) 0px 2px 8px 0px;
+    border-radius: 10px;
+}
