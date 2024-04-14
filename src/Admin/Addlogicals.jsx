@@ -9,8 +9,8 @@ const Addlogicals = () => {
   };
 
   return (
-    <div>
-      <div className="Logical-questions border mt-2">
+    <div className="addlogical">
+      <div className="Logical-questions mt-2">
         <h1>Admin side for handling programming quesitions</h1>
         <div className="add-logicals">
           <div className="question-head ">
@@ -45,7 +45,7 @@ const Addlogicals = () => {
             <div className="input-text-cases">
               {Array.from({ length: testcase }).map((_, index) => (
                 <div key={index} className="test-case">
-                  <div className="head text-primary  ">
+                  <div className="text-primary  ">
                     Test Case {index + 1}:
                   </div>
 
