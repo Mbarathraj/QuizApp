@@ -16,7 +16,11 @@ const QuizComponent = () => {
   const [switchcount, setSwitchCount] = useState(0)
 
   const [show, setShow] = useState(true)
-  let audio = new Audio(beepAudio);
+  // let audio = new Audio(beepAudio);
+
+  // document.addEventListener("contextmenu",(e)=>{
+  //   e.preventDefault()
+  // })
 
   // function notify(switchcount) {
   //   toast(`Don't Switch the page ${switchcount}/5`);

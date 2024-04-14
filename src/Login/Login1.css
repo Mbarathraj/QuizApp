@@ -1,20 +1,18 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
 body
 {
-    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-
 }
 
 .container{
     height: 550px;
-    
+    min-width: 400px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -51,10 +49,14 @@ body
 }
 input
 {
-    height: 30px;
+    height: 40px;
     width: 250px;
     border-radius: 5px;
     padding: 5px;
     border: 1px solid black;
     opacity: 0.6;
 }
+input:focus{
+    outline-color: rgb(7, 221, 7);
+    border: none;
+} */
