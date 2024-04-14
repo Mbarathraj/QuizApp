@@ -10,8 +10,7 @@ import Login1 from './Login/Login1'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Dashboard from './Components/Dashboard/Dashboard'
-import Admin from '../Admin/Admin'
-import AdminaddQuestion from '../Admin/AdminaddQuestion'
+import Adminmain from '../Admin/Adminmain'
 
 function App() {
   return (
@@ -31,10 +30,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard/>}></Route>
        </Routes>
        </BrowserRouter> */}
-       <div className="main">
-       <Admin/>
-       <AdminaddQuestion/>
-       </div>
+       <Adminmain/>
        
     </>
   )
