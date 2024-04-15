@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { CiImport } from "react-icons/ci";
 
@@ -16,7 +17,7 @@ const Admin = ({ setShowState }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => { setShow(false) };
   const handleShow = () => { setShow(true) };
-
+const navigate=useNavigate()
   const handleLogin = () => {
     localStorage.setItem("userInfo", JSON.stringify({}));
     navigate('/login')
