@@ -10,6 +10,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { CiImport } from "react-icons/ci";
 
 const Admin = ({ setShowState }) => {
   const [show, setShow] = useState(false);
@@ -57,8 +58,7 @@ const Admin = ({ setShowState }) => {
                 }}
 
               >
-                <MdOutlineFileUpload className="Upload-icon icons" /> Upload
-                MCQ
+                 <CiImport className='upload-icon icons'/> Import MCQ
               </div>
 
 

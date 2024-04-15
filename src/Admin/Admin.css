@@ -31,6 +31,9 @@
     flex-direction: column;
     gap: 2.5rem;
 }
+.head .list div{
+    cursor: pointer;
+}
 .admin-header img {
     width: 150px;
     height: 100px;
@@ -41,6 +44,7 @@
 }
 .AdminaddQuestion,.uploadmcq,.result{
     margin-left: 250px;
+    min-height: 100vh;
 }
 .addQ-container{
     background-color: #ffffff;
@@ -202,3 +206,15 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: 1px solid #e0e0e0;
 }   
+ tr,td,th{
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ tr{
+ width: 100%;
+}
+.table thead tr th{
+    width: 300px;
+   
+}
