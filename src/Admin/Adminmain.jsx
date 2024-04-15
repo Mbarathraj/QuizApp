@@ -4,9 +4,10 @@ import AdminaddQuestion from './AdminaddQuestion'
 import Addlogicals from './Addlogicals'
 import AdminMainContent from './AdminMainContent'
 import { useState } from 'react'
+import UploadMcq from './UploadMcq'
 
 const Adminmain = () => {
-
+  
   const [showState,setShowState]=useState(1)
   return (
     <div>
@@ -15,6 +16,7 @@ const Adminmain = () => {
               {/* <Addlogicals />
               <AdminaddQuestion/> */}
               <AdminMainContent showState={showState}/>
+              
             
           </div>
     </div>
