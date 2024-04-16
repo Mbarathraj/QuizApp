@@ -31,9 +31,12 @@ const AdminaddQuestion = () => {
      setMrtop((prev)=> prev-340);
     var dell = document.getElementById("Delbut");
     (dell.parentNode).remove()
+    
   }
   useEffect(() => {
-    console.log(mrtop)
+    if (mrtop == 0) {
+      setAddbut(false);
+    }
   },[mrtop])
   const AddQuestions = () => {
     setAddbut(true)
