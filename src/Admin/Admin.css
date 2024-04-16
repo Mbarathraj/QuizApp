@@ -48,8 +48,6 @@
 }
 
 .addQ-container{
-    background-color: #ffffff;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -87,7 +85,8 @@
 .addQ-container h1{
     font-size: 20px;
     color: #555;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 .input-question textarea{
     width: 100%;
@@ -100,7 +99,7 @@
     resize: none;
 }
 .options{
-    width: 80%;
+    width: 75%;
     border: none;
     outline: none;
     padding: 6px;
@@ -132,9 +131,10 @@
 }
 
 .options input{
+    padding-left: 7px;
     border: none;
     outline: none;
-    border-bottom:2px solid #888 ;
+    border-bottom:2px dotted #888 ;
 }
 
 .Logical-questions{
@@ -237,8 +237,9 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
     font-size: 30px;
     margin-top: 30px;
     margin-left: 30px;
-    box-shadow: rgba(50, 50, 50, 0.395) 0px 2px 8px 0px;
-    border-radius: 10px;
+    box-shadow: inset -5px -5px 12px #9d9d9d,
+            inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 40%;
     opacity: 0.9;
 }
 .title-icons{
@@ -266,8 +267,9 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
     right: 10px;
     bottom: 10px;
     opacity: 0.9;
-    box-shadow: rgba(50, 50, 50, 0.395) 0px 2px 8px 0px;
-    border-radius: 10px;
+    box-shadow: inset -5px -5px 12px #f0f0f0,
+            inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;

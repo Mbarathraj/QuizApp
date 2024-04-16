@@ -1,6 +1,6 @@
 import { BsFillSendArrowUpFill } from "react-icons/bs";
 import { IoAddCircle } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaRegCircle } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import { MdOutlineFormatBold } from "react-icons/md";
@@ -26,10 +26,19 @@ const AdminaddQuestion = () => {
 
    const handleUnderlineClick = () => {
      setIsUnderlined(!isUnderlined);
-   };
+  };
+  function handleDelete() {
+     setMrtop((prev)=> prev-340);
+    var dell = document.getElementById("Delbut");
+    (dell.parentNode).remove()
+  }
+  useEffect(() => {
+    console.log(mrtop)
+  },[mrtop])
   const AddQuestions = () => {
     setAddbut(true)
-    setMrtop(mrtop+340)
+     setMrtop(mrtop + 340);
+    
     const newQuestion = (
       <div className="questions" key={questions.length}>
         <div className="input-question">
@@ -55,24 +64,17 @@ const AdminaddQuestion = () => {
             </p>
           </div>
         </div>
-        <div className="Delete-button">
+        <div className="Delete-button" id="Delbut" onClick={() => {
+          handleDelete()
+        }}>
           <MdDeleteForever className="text-danger" />
         </div>
       </div>
     );
     setQuestions([...questions, newQuestion]);
+   
   };
-  const addElement = () => {
-    if (elements.length != 4) {
-      const element = (
-        <p key={elements.length}>
-          <FaRegCircle />
-          <input type="text" />
-        </p>
-      );
-      setElements([...elements, element]);
-    }
-  };
+
   return (
     <>
       <div className="AdminaddQuestion">
@@ -117,12 +119,13 @@ const AdminaddQuestion = () => {
             )}
           </div>
           <div className="first-col">
-            <div>
-              {questions.map((question, index) => (
-                <div key={index}>{question}</div>
-              ))}
-            </div>
-
+            
+              <div>
+                {questions.map((question, index) => (
+                  <div key={index}>{question}</div>
+                ))}
+              </div>
+            
             <div className="second-col">
               <div
                 className="add-icon-btn"
@@ -137,7 +140,7 @@ const AdminaddQuestion = () => {
                   className="text-primary"
                   style={{ position: "absolute", left: "5px", top: "5px" }}
                   onClick={AddQuestions}
-                /> 
+                />
               </div>
             </div>
           </div>
