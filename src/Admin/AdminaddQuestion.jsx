@@ -13,7 +13,8 @@ const AdminaddQuestion = () => {
    const [isBold, setIsBold] = useState(false);
    const [isItalic, setIsItalic] = useState(false);
   const [isUnderlined, setIsUnderlined] = useState(false);
-  
+  const [addbut, setAddbut] = useState(false)
+  const [mrtop, setMrtop] = useState(0);
    const handleBoldClick = () => {
      setIsBold(!isBold);
      console.log(!isBold)
@@ -27,6 +28,8 @@ const AdminaddQuestion = () => {
      setIsUnderlined(!isUnderlined);
    };
   const AddQuestions = () => {
+    setAddbut(true)
+    setMrtop(mrtop+340)
     const newQuestion = (
       <div className="questions" key={questions.length}>
         <div className="input-question">
@@ -52,7 +55,9 @@ const AdminaddQuestion = () => {
             </p>
           </div>
         </div>
-        <MdDeleteForever className="text-danger " />
+        <div className="Delete-button">
+          <MdDeleteForever className="text-danger" />
+        </div>
       </div>
     );
     setQuestions([...questions, newQuestion]);
@@ -73,29 +78,43 @@ const AdminaddQuestion = () => {
       <div className="AdminaddQuestion">
         <div className="addQ-container">
           <h1>Admin side for handling questions</h1>
-          <div className="question-head">
-            <div className="title">
-              <input
-                type="text"
-                placeholder="Untitled Question"
-                style={{
-                  fontWeight: isBold ? "bold" : "normal",
-                  fontStyle: isItalic ? "italic" : "normal",
-                  textDecoration: isUnderlined ? "underline" : "none",
-                }}
-              />
+          <div className="untitled-question">
+            <div className="row-1">
+              <div className="question-head">
+                <div className="title">
+                  <input
+                    type="text"
+                    placeholder="Untitled Question"
+                    style={{
+                      fontWeight: isBold ? "bold" : "normal",
+                      fontStyle: isItalic ? "italic" : "normal",
+                      textDecoration: isUnderlined ? "underline" : "none",
+                    }}
+                  />
+                </div>
+                <div className="title-icons">
+                  <div className="bold" onClick={handleBoldClick}>
+                    <MdOutlineFormatBold />
+                  </div>
+                  <div className="italic" onClick={handleItalicClick}>
+                    <MdOutlineFormatItalic />
+                  </div>
+                  <div className="underline" onClick={handleUnderlineClick}>
+                    <MdOutlineFormatUnderlined />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="title-icons">
-              <div className="bold" onClick={handleBoldClick}>
-                <MdOutlineFormatBold />
+            {!addbut && (
+              <div className="row-2" style={{ display: "block" }}>
+                <div className="add-icon-btn">
+                  <IoAddCircle
+                    className="text-primary"
+                    onClick={AddQuestions}
+                  />
+                </div>
               </div>
-              <div className="italic" onClick={handleItalicClick}>
-                <MdOutlineFormatItalic />
-              </div>
-              <div className="underline" onClick={handleUnderlineClick}>
-                <MdOutlineFormatUnderlined />
-              </div>
-            </div>
+            )}
           </div>
           <div className="first-col">
             <div>
@@ -103,10 +122,22 @@ const AdminaddQuestion = () => {
                 <div key={index}>{question}</div>
               ))}
             </div>
+
             <div className="second-col">
-              <div className="add-icon-btn">
-                <IoAddCircle className="text-primary" onClick={AddQuestions} />
-                
+              <div
+                className="add-icon-btn"
+                style={{
+                  display: !addbut ? "none" : "block",
+                  textAlign: "center",
+                  position: "relative",
+                  marginTop: `${mrtop}px`,
+                }}
+              >
+                <IoAddCircle
+                  className="text-primary"
+                  style={{ position: "absolute", left: "5px", top: "5px" }}
+                  onClick={AddQuestions}
+                /> 
               </div>
             </div>
           </div>

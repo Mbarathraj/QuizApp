@@ -156,6 +156,9 @@
     color: #555;
     margin-top: 20px;
 }
+.question-head{
+    height: max-content;
+}
 .test-cases{
     width: 1200px;
     margin-top: 20px;
@@ -202,6 +205,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
 .questions{
     border: none;
     border: 1px solid #e0e0e0;
+    position: relative;
 }
 .input-question textarea{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -224,20 +228,21 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
 }
 .add-icon-btn{
     width: 40px;
-    height: 100px;
+    height: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-left: 30px;
     box-shadow: rgba(50, 50, 50, 0.395) 0px 2px 8px 0px;
     border-radius: 10px;
+    opacity: 0.9;
 }
 .title-icons{
-    width: 130px;
+    width: 140px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -245,7 +250,29 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
     border: 2px solid #c6c6c6;
     border-radius: 20px;
     margin-top: 10px;
-    color: #888;
+    color: #555;
     font-size: large;
     gap: 10px;
+    
+}
+.bold,.italic,.underline{
+    cursor: pointer;
+}
+.Delete-button{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    position:absolute;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.9;
+    box-shadow: rgba(50, 50, 50, 0.395) 0px 2px 8px 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.untitled-question{
+    display: flex;
+    
 }
